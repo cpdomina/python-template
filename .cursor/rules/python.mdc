@@ -3,14 +3,22 @@ description: Python Code Style Guide
 globs: *.py
 alwaysApply: true
 ---
-
 # Python Coding Style Guide
 
-Follow these style conventions for all Python code in this project:
+Follow these style conventions to write Pythonic code that emphasizes readability and conciseness:
+
+
+## Core Pythonic Principles
+- Write code that's readable to humans first, machines second
+- Simple is better than complex
+- Explicit is better than implicit
+- Flat is better than nested
+- Sparse is better than dense
+- Follow the "one obvious way to do it" philosophy
 
 ## General Formatting
 - Follow PEP 8 conventions
-- Use [ruff.toml](mdc:ruff.toml) for configuration
+- Check [pyproject.toml](mdc:pyproject.toml) for formatting configuration
 
 ## Naming Conventions
 - Classes: CamelCase (e.g., `MyClass`)
@@ -18,22 +26,50 @@ Follow these style conventions for all Python code in this project:
 - Variables: snake_case (e.g., `my_variable`)
 - Constants: UPPER_SNAKE_CASE (e.g., `MY_CONSTANT`)
 - Private attributes/methods: prefix with underscore (e.g., `_private_method`)
+- Use descriptive, intention-revealing names
 
-## Imports
-- Group imports in this order: standard library, third-party, local application
-- One import per line
-- Avoid wildcard imports (`from module import *`)
-- Use absolute imports over relative imports
+## Pythonic Constructs
+- Use list/dict/set comprehensions instead of loops when appropriate
+- Leverage generators for memory efficiency with large data sets
+- Use context managers (`with` statement) for resource management
+- Prefer built-in functions and standard library solutions
+- Use duck typing and EAFP (Easier to Ask Forgiveness than Permission) approach
 
 ## String Formatting
 - Prefer f-strings for string formatting
 - Use single quotes for strings unless double quotes avoid backslashes
 
-## Comments
-- Docstrings only for complex functions/methods
-- Use Google-style docstrings
-- Inline comments only when necessary to explain non-obvious code to an advanced user
+## Comments and Documentation
+- Write self-explanatory code with minimal comments.
+- Only add docstrings when explicitly requested.
+- Use single-line docstrings that focus on purpose, not parameters. Let type hints convey parameter information.
+- Include inline comments *only* for non-obvious logic, complex algorithms, or critical edge cases that are not clear from the code itself.
+- Do not write comments on imports.
+- Do not write comments that merely restate what the code is obviously doing or explain self-evident code elements.
+- Avoid comments that primarily describe the history of a code change (e.g., "# Refactored this function", "# Removed unused variable", "# Added new parameter"). Focus comments on *why* the current code is the way it is, if not obvious, rather than *how* it got there.
+
+## Functions and Methods
+- Follow the single responsibility principle
+- Keep functions focused and concise (under 50 lines when possible)
+- Use default parameter values instead of conditionals
+- Return early to avoid deep nesting
 
 ## Type Hints
 - Use type hints for function parameters and return values
 - Use typing module for complex types
+
+## Error Handling
+- Only implement exception handling when you intend to recover from or meaningfully respond to specific errors
+- Avoid catching exceptions only to log/print them and then continue execution as if nothing happened
+- Do not add exception handling boilerplate that doesn't actually handle the error
+- Let exceptions propagate naturally when they represent actual error conditions that should stop execution
+- Remember: error handling should have a clear purpose beyond merely acknowledging an error occurred
+
+## Defensive Programming
+- Assume valid inputs unless the function is a public API boundary
+- Avoid excessive input validation for internal functions
+- Do not add redundant checks for conditions that would naturally raise appropriate exceptions
+- Skip unnecessary existence/emptiness checks when subsequent code would fail appropriately anyway
+- Trust the caller to provide valid inputs for internal functions
+- Only validate what's truly necessary - code should be concise and focused on its main purpose
+- Prefer letting Python's built-in type checking and exceptions handle invalid inputs naturally

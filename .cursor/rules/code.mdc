@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Code Implementation
+- Only use APIs, libraries, and frameworks you know with certainty
+- If you don't know how something works, don't write speculative code
+- State clearly when you lack sufficient information instead of guessing
+- Ask for clarification rather than implementing based on assumptions
+
+
+## Strict Request Boundaries
+- **ONLY** write the exact code that is explicitly requested - nothing more, nothing less
+- **DO NOT** write additional public functions, methods, or classes beyond what was asked
+- **DO NOT** write example usage, demo code, or test cases unless explicitly requested
+- **DO NOT** write "extra" functions that you think might be helpful
+- **DO NOT** anticipate future needs or write "just in case" code
+- When in doubt, ask "Should I also write X?" rather than assuming yes
