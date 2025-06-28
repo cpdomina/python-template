@@ -13,3 +13,6 @@ uv.lock
 # Mac
 .DS_Store
 **/.DS_Store
+
+# Environment
+.env
