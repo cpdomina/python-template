@@ -5,7 +5,9 @@ build/
 dist/
 wheels/
 *.egg-info
-uv.lock
+
+# IDE
+.idea
 
 # Virtual environments
 .venv
@@ -14,5 +16,6 @@ uv.lock
 .DS_Store
 **/.DS_Store
 
-# Environment
+# Secrets
+.streamlit/secrets.toml
 .env
