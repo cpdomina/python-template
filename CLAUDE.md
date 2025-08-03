@@ -18,11 +18,7 @@
 6. **USE** tabs instead of spaces in code indentation
 7. **INLINE** comments should be lowercase
 
-# 📋 Instructions
-
-Follow the instructions below carefully.
-
-## Environment Instructions
+# Environment Instructions
 
 ### Project Environment
 - **Package Manager**: uv
@@ -35,15 +31,7 @@ Follow the instructions below carefully.
 1. **FOCUS** on code logic and structure, not formatting details
 2. **NEVER** manually format code or run formatting commands - All formatting is automatically applied through the IDE
 
-## Python Coding Standards
-
-### Core Principles
-- **FOLLOW** Python's "one obvious way to do it" philosophy
-- Readability > cleverness
-- Simple > complex
-- Explicit > implicit
-- Flat > nested
-- Use built-in functions and standard library first
+# Python Coding Standards
 
 ### Code Reuse and DRY Principle
 - **IDENTIFY** common patterns and extract them immediately
@@ -51,6 +39,7 @@ Follow the instructions below carefully.
 - **USE** itertools and functional tools to eliminate loops
 - **COMBINE** data sources early rather than processing separately
 - **NEVER** write multiple loops when one will suffice
+- **EXTRACT** reusable helper functions into utils modules when appropriate (e.g., `utils.db`, `utils.io`).
 
 ### Naming Conventions
 - Classes: `CamelCase`
@@ -86,7 +75,7 @@ Follow the instructions below carefully.
 - Expect specific types, not unions (datetime not str | datetime)
 - Extract repeated logic into utilities; use composition and parameterization over duplication
 
-## Implementation Instructions
+# Implementation Instructions
 
 ### Critical Implementation Rules
 1. **ONLY** implement what's explicitly requested - no extra features or examples
