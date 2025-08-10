@@ -9,5 +9,9 @@
       "mcp__context7__get-library-docs"
     ],
     "deny": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
 }

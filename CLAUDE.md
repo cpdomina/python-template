@@ -10,6 +10,8 @@
 
 # ⚠️ Most Important Rules
 
+**Strictly follow the guidelines, instructions, and standards in this document!**
+
 1. **ONLY** implement what's explicitly requested
 2. **ASK** for clarification rather than making assumptions
 3. **ALWAYS** write self-explanatory code that needs minimal comments
